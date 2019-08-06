@@ -43,7 +43,7 @@ Plot#3 <br>
 (d) `s = 1 / 3 * a / 4 - 6 / 2 + 2 / 3 * 6 / g ;` <br>
     (a = 4, g = 3, assume s to be an int) <br>
 # [E] Convert the following equations into corresponding JS statements.
-
+![task3](https://github.com/rsantoshreddy/js-training/blob/master/images/Screenshot%20from%202019-08-07%2000-20-26.png?raw=true)
 
 1) Write a JavaScript code,
 
