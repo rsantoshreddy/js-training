@@ -13,7 +13,7 @@ var y;
 // var year2019 = 2019;
 
 // Basic data types (Primary data types);
-// var name = 'Teja'; //string
+var name = 'Teja'; //string
 // var age = 20; //Number
 // var isMarried = false; // Boolean
 // var taluka = 'tara stana'; // undefined

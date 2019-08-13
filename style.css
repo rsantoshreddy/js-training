@@ -1,3 +1,17 @@
-﻿h1 {
+﻿p {
+  color: green;
+}
+.message {
   color: red;
 }
+
+span {
+  width: 60px;
+  border: 1px solid red;
+  display: inline-block;
+}
+
+/* width
+height
+margin
+padding */
