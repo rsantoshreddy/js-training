@@ -55,10 +55,34 @@
 // console.log(parseInt(num8)); //10
 // console.log(parseFloat(num8)); //10
 
-var num10 = '10.20etstat'; // char num10 = [10.20etstat]
-console.log(num10);
-// var x = 2; //11111111111111111111111111111111 = 2^32+2^31+2^30+
-var x = 2; //00000000000000000000000000000010 = 0*2^0 + 1*2^1= 0+2=2
-console.log('+num10=', +num10);
-console.log('parseInt(num10)=', parseInt(num10));
-console.log('parseFloat(num10)=', parseFloat(num10));
+// var num10 = '10.20etstat'; // char num10 = [10.20etstat]
+// console.log(num10);
+// // var x = 2; //11111111111111111111111111111111 = 2^32+2^31+2^30+
+// var x = 2; //00000000000000000000000000000010 = 0*2^0 + 1*2^1= 0+2=2
+// console.log('+num10=', +num10);
+// console.log('parseInt(num10)=', parseInt(num10));
+// console.log('parseFloat(num10)=', parseFloat(num10));
+
+console.log('tanuj' > 'manju'); //true
+console.log('ant' > 'Elephant'); //false
+
+var x = 20;
+if (x >= 20 && x < 10) {
+  console.log('value is true');
+} else {
+  console.log('value is false');
+}
+
+var x = 1;
+if (x >= 20 || x <= 10) {
+  console.log('value is true');
+} else {
+  console.log('value is false');
+}
+
+//Summary AND : &&
+// x
+// true + true = true
+// false + true = false
+// true + false = false
+// false + false = false
