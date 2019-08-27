@@ -43,8 +43,47 @@
 // // multiply(10, 20);
 // multiply();
 
-function division(divident, divider) {
-  console.log(divident / divider);
+// function division(divident, divider) {
+//   console.log(divident / divider);
+// }
+
+// division(50, 10);
+
+// function xyz(a, b) {
+//   console.log(a, b);
+//   console.log(a + b);
+// }
+
+// Each and every function in JS have arguments and this with in it.
+// function xyz() {
+//   console.log(arguments[0]);
+//   console.log(arguments[1]);
+//   console.log(this);
+// }
+
+// xyz(1, 2);
+
+// function add() {
+//   var sum = 0;
+//   for (let index = 0; index < arguments.length; index++) {
+//     sum = sum + arguments[index];
+//   }
+//   console.log(sum);
+//   return sum;
+// }
+// add();
+// add(1, 2);
+// add(1, 2, 3);
+// add(1, 2, 3, 4);
+
+// Based on the way you call your function the value of this is going to change. ie. the context of this will vary.
+function xyz() {
+  console.log('xyz() ====> ', this); // Window
 }
 
-division(50, 10);
+function abc() {
+  console.log('abc() ===> ', this); // abc
+}
+// + - * / ++ -- += -= new
+xyz();
+new abc();
