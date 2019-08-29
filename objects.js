@@ -294,33 +294,107 @@
 // Copy Object using functions and arguments
 // Array
 
-var teja = {
-  name: 'teja',
-  age: 26,
-  place: 'gunturu',
-  talk: function() {
-    console.log('Teja is talkng...');
-  }
-};
+// var teja = {
+//   name: 'teja',
+//   age: 26,
+//   place: 'gunturu',
+//   talk: function() {
+//     console.log('Teja is talkng...');
+//   }
+// };
 
-// var xyz = Object.keys(teja);
-// console.log(xyz);
+// // var xyz = Object.keys(teja);
+// // console.log(xyz);
 
-// for (var index = 0; index < xyz.length; index++) {
-//   console.log(teja[xyz[index]]);
-//   // teja['name'];
+// // for (var index = 0; index < xyz.length; index++) {
+// //   console.log(teja[xyz[index]]);
+// //   // teja['name'];
+// // }
+
+// for (var key in teja) {
+//   console.log(key);
+//   // console.log(teja[key]);
 // }
 
-for (var key in teja) {
-  console.log(key);
-  // console.log(teja[key]);
+// var arrTeja = ['teja', 25, 'gunturu', 'white', true, null, , { married: false }, 1254, 5468789556, 2156464];
+
+// // for([create avariable] [in] [object/Array]);
+
+// for (var xyz in arrTeja) {
+//   console.log(xyz);
+//   // console.log(arrTeja[xyz]);
+// }
+
+// Each and every function in JS have arguments and this with in it.
+// Based on the way you call your function the value of this is going to change. ie. the context of this will vary.
+
+var obj = {
+  name: 'xyz'
+};
+
+var obj1 = new Object({ name: 'abc' });
+
+function Person(name, age, id) {
+  this.name = name;
+  this.age = age;
+  this.id = id;
+  // this.talk = talk;
 }
 
-var arrTeja = ['teja', 25, 'gunturu', 'white', true, null, , { married: false }, 1254, 5468789556, 2156464];
+Person.prototype.talk = function() {
+  console.log(this.name + 'is talking....');
+};
 
-// for([create avariable] [in] [object/Array]);
+var mahesh = new Person('Mahesh', 25, 123);
 
-for (var xyz in arrTeja) {
-  console.log(xyz);
-  // console.log(arrTeja[xyz]);
-}
+var teja = new Person('Teja', 25, 1523);
+
+var xyz = Person('xyz', 60, 546);
+
+console.log(mahesh.name);
+mahesh.talk();
+
+console.log(teja.name);
+teja.talk();
+
+var obj = { name: 'xyz' };
+var obj = new Object({ name: 'xyz' });
+
+var arr = [1, 2, 3, 4];
+var arrObj = new Array(1, 2, 3, 4);
+
+console.log(arr);
+console.log(arrObj);
+
+// 1. Object: It is collection of some properties and methods
+
+// 5 primitive data types
+// number
+// string
+// boolean
+
+var five = 5;
+// var fiveObj = new Number(5);
+
+var s = String('test');
+console.log(s.toUpperCase());
+console.log(s.toLowerCase());
+
+console.log(five.toFixed(5));
+
+// console.log(fiveObj);
+// console.log(fiveObj.toFixed(5));
+
+// Reference Data Types
+// Object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+// Array: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+// String: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+// Number: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+// Boolean: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+// Math: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+// Date: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+// Window: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Window
+
+var arr = [1, 2, 3]; // [1, 2, 3, 8]
+arr.push(8);
+console.log(arr);

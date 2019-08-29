@@ -77,13 +77,50 @@
 // add(1, 2, 3, 4);
 
 // Based on the way you call your function the value of this is going to change. ie. the context of this will vary.
-function xyz() {
-  console.log('xyz() ====> ', this); // Window
-}
+// function xyz() {
+//   console.log('xyz() ====> ', this); // Window
+// }
 
-function abc() {
-  console.log('abc() ===> ', this); // abc
+// function abc() {
+//   console.log('abc() ===> ', this); // abc
+// }
+// // + - * / ++ -- += -= new
+// xyz();
+// new abc();
+
+// Function Declaration
+// function multiply(x, y) {
+//   return x * y;
+// }
+
+// var secondMultiply = multiply;
+
+// console.log(multiply(2, 3));
+// console.log(secondMultiply(2, 9));
+
+// // Function Expression
+// // anonimus==no name
+// var sum = function test(a, b) {
+//   return a * b;
+// };
+
+// console.log(sum(2, 3)); //sum
+// var add = sum;
+
+// console.log(add(2, 3)); // add
+
+// console.log(test(5, 8));
+
+console.log(multiply(5, 8));
+console.log(sum(5, 8));
+
+function multiply(x, y) {
+  return x * y;
 }
-// + - * / ++ -- += -= new
-xyz();
-new abc();
+var sum = function(a, b) {
+  return a * b;
+};
+
+// 1. Function declaration and function expression
+// 2. Function expression can be renamed or assigned but right side cant be accessed
+// 3. Function declarations are hoisted but function expressions are not hoisted
