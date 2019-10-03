@@ -111,16 +111,88 @@
 
 // console.log(test(5, 8));
 
-console.log(multiply(5, 8));
-console.log(sum(5, 8));
+// console.log(multiply(5, 8));
+// console.log(sum(5, 8));
 
-function multiply(x, y) {
-  return x * y;
-}
-var sum = function(a, b) {
-  return a * b;
-};
+// function multiply(x, y) {
+//   return x * y;
+// }
+// var sum = function(a, b) {
+//   return a * b;
+// };
 
 // 1. Function declaration and function expression
 // 2. Function expression can be renamed or assigned but right side cant be accessed
 // 3. Function declarations are hoisted but function expressions are not hoisted
+
+// Function Over loading
+// function add(a, b) {
+//   return a + b;
+// }
+
+// function add(a, b, c) {
+//   console.log(a + b + c);
+// }
+
+// function add() {
+//   return 0;
+// }
+
+// console.log(add(1, 2)); //3
+// console.log(add(1, 2, 6)); //9
+// console.log(add()); //0
+
+// Recursion
+
+// function printNum(a) {
+//   // console.log(a % 2);
+
+//   if (a % 2) {
+//     console.log(a, 'is an odd number');
+//   } else {
+//     console.log(a, 'is an even number');
+//   }
+
+//   if (a === 10) {
+//     return a;
+//   } else {
+//     return printNum(++a);
+//   }
+// }
+
+// function pow(x) {
+//   console.log(x);
+//   if (x == 10) {
+//     return x;
+//   } else {
+//     return pow(++x);
+//   }
+// }
+
+// printNum(4);
+// pow(0);
+
+// Javascript: variables are function scoped. Not block scoped with var
+var b = 10;
+
+function someFunction() {
+  var b = 20;
+  var a = 30;
+  console.log(b);
+}
+
+if (b == 10) {
+  var c = 90;
+}
+
+console.log(b); //20
+someFunction();
+
+console.log(b); //10
+console.log(c); //undefined,
+// console.log(a); //error
+
+for (var index = 0; index < 20; index++) {}
+console.log(index); //20
+
+// BODMAS : Bracket, Of, Division, Multiplication, Addition, Substration

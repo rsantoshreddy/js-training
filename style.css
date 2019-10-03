@@ -15,3 +15,9 @@ span {
 height
 margin
 padding */
+
+#parent,
+#child {
+  border: 1px solid red;
+  padding: 5px;
+}

@@ -328,43 +328,43 @@
 // Each and every function in JS have arguments and this with in it.
 // Based on the way you call your function the value of this is going to change. ie. the context of this will vary.
 
-var obj = {
-  name: 'xyz'
-};
+// var obj = {
+//   name: 'xyz'
+// };
 
-var obj1 = new Object({ name: 'abc' });
+// var obj1 = new Object({ name: 'abc' });
 
-function Person(name, age, id) {
-  this.name = name;
-  this.age = age;
-  this.id = id;
-  // this.talk = talk;
-}
+// function Person(name, age, id) {
+//   this.name = name;
+//   this.age = age;
+//   this.id = id;
+//   // this.talk = talk;
+// }
 
-Person.prototype.talk = function() {
-  console.log(this.name + 'is talking....');
-};
+// Person.prototype.talk = function() {
+//   console.log(this.name + 'is talking....');
+// };
 
-var mahesh = new Person('Mahesh', 25, 123);
+// var mahesh = new Person('Mahesh', 25, 123);
 
-var teja = new Person('Teja', 25, 1523);
+// var teja = new Person('Teja', 25, 1523);
 
-var xyz = Person('xyz', 60, 546);
+// var xyz = Person('xyz', 60, 546);
 
-console.log(mahesh.name);
-mahesh.talk();
+// console.log(mahesh.name);
+// mahesh.talk();
 
-console.log(teja.name);
-teja.talk();
+// console.log(teja.name);
+// teja.talk();
 
-var obj = { name: 'xyz' };
-var obj = new Object({ name: 'xyz' });
+// var obj = { name: 'xyz' };
+// var obj = new Object({ name: 'xyz' });
 
-var arr = [1, 2, 3, 4];
-var arrObj = new Array(1, 2, 3, 4);
+// var arr = [1, 2, 3, 4];
+// var arrObj = new Array(1, 2, 3, 4);
 
-console.log(arr);
-console.log(arrObj);
+// console.log(arr);
+// console.log(arrObj);
 
 // 1. Object: It is collection of some properties and methods
 
@@ -373,14 +373,14 @@ console.log(arrObj);
 // string
 // boolean
 
-var five = 5;
+// var five = 5;
 // var fiveObj = new Number(5);
 
-var s = String('test');
-console.log(s.toUpperCase());
-console.log(s.toLowerCase());
+// var s = String('test');
+// console.log(s.toUpperCase());
+// console.log(s.toLowerCase());
 
-console.log(five.toFixed(5));
+// console.log(five.toFixed(5));
 
 // console.log(fiveObj);
 // console.log(fiveObj.toFixed(5));
@@ -395,6 +395,56 @@ console.log(five.toFixed(5));
 // Date: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 // Window: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Window
 
-var arr = [1, 2, 3]; // [1, 2, 3, 8]
-arr.push(8);
+// var arr = [1, 2, 3]; // [1, 2, 3, 8]
+// arr.push(8);
+// console.log(arr);
+
+// var obj = {
+//   name: 'test'
+// };
+
+// console.log(obj.name);
+// console.log(obj);
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+var Teja = new Person('Teja', 25);
+var Mahesh = new Person('Mahesh', 24);
+
+console.log(Teja);
+console.log(Mahesh);
+
+for (var prop in Teja) {
+  console.log(Teja[prop]);
+}
+
+Person.prototype.talk = function() {
+  console.log(this.name + 'is Speaking!!');
+};
+
+console.log(Teja.talk());
+console.log(Mahesh.talk());
+
+var arr = [1, 2, 3, 6, 7, 8];
+
+function filterMethod(ele) {
+  console.log(!(ele % 2));
+  return !(ele % 2);
+}
+
+var filteredElements = arr.filter(filterMethod);
+
+console.log(filteredElements);
+
+arr.push('10');
+arr.unshift(0);
 console.log(arr);
+
+// pop, push, slice, unshift, shift, filter, reduce, map, sort
+
+var s = 'test';
+
+console.log(s.repeat(3));
